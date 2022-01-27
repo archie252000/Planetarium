@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+#onboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 100vh;
+  background: url("./Assets/BG1.png") no-repeat center center/cover;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: absolute;
+  -webkit-animation: 1.5s ease-in backgroundAnimation;
+          animation: 1.5s ease-in backgroundAnimation;
+}
+
+#onboardImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#onboardImg {
+  width: 15%;
+  height: auto;
+  padding-bottom: 20pt;
+}
+
+#onboardImgText {
+  width: 40%;
+  height: auto;
+}
+
+#continue {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 100;
+  cursor: pointer;
+}
+
+#continueLine {
+  height: 1px;
+  width: 100%;
+  background-color: white;
+  opacity: 90%;
+}
+
+@-webkit-keyframes backgroundAnimation {
+  0% {
+    -webkit-filter: brightness(5%);
+            filter: brightness(5%);
+  }
+  100% {
+    -webkit-filter: brightness(100%);
+            filter: brightness(100%);
+  }
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    -webkit-filter: brightness(5%);
+            filter: brightness(5%);
+  }
+  100% {
+    -webkit-filter: brightness(100%);
+            filter: brightness(100%);
+  }
+}
+/*# sourceMappingURL=main.css.map */
