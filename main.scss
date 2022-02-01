@@ -1,62 +1,185 @@
-    * {
-        margin: 0;
-        padding: 0;
-        font-family: 'Roboto', sans-serif;
-    }
-    
-    $path-bg1:'./Assets/BG1.png';
-    #onboard {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        height: 100vh;
-        background: url($path-bg1) no-repeat center center/cover;
-        align-items: center;
-        justify-content: space-evenly;
-        position: absolute;
-        animation: 1.5s ease-in backgroundAnimation;
-    }
-    
-    #onboardImages {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    #onboardImg {
-        width: 15%;
-        height: auto;
-        padding-bottom: 20pt;
-    }
-    
-    #onboardImgText {
-        width: 40%;
-        height: auto;
-    }
-    
-    #continue {
-        background: none;
-        border: none;
-        padding: 0.5rem;
-        color: white;
-        font-size: 1.8rem;
-        font-weight: 100;
-        cursor: pointer;
-    }
-    
-    #continueLine {
-        height: 1px;
-        width: 100%;
-        background-color: white;
-        opacity: 90%;
-    }
-    
-    //Animations
-    @keyframes backgroundAnimation {
-        0% {
-            filter: brightness(5%)
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
         }
-        100% {
-            filter: brightness(100%);
+        
+        body {
+            overflow: hidden;
         }
-    }
+        
+        .my-container {
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            scroll-behavior: smooth;
+            height: 100vh;
+            scrollbar-width: none;
+        }
+        
+        .my-container::-webkit-scrollbar {
+            display: none;
+        }
+        
+        $path-bg1:'./Assets/BG1.png';
+        $path-bg2:'./Assets/BG2.png';
+        // onBoarding page
+        #onboard {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background: url($path-bg1) no-repeat center center/cover;
+            align-items: center;
+            justify-content: space-evenly;
+            animation: 1.5s ease-in backgroundAnimation;
+            scroll-snap-align: start;
+        }
+        
+        #onboardImages {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        #onboardImg {
+            width: 15%;
+            height: auto;
+            padding-bottom: 20pt;
+        }
+        
+        #onboardImgText {
+            width: 40%;
+            height: auto;
+        }
+        
+        #continue {
+            background: none;
+            border: none;
+            padding: 0.5rem;
+            color: white;
+            font-size: 1.8rem;
+            font-weight: 100;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        
+        #continueLine {
+            height: 1px;
+            width: 100%;
+            background-color: white;
+            opacity: 90%;
+        }
+        
+        // Details Page
+        #details {
+            height: 100vh;
+            background: url($path-bg2) no-repeat center center/cover;
+            background-attachment: fixed;
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #top-bar {
+            display: flex;
+            flex: 1;
+            align-items: center;
+            padding: 0.5vw;
+        }
+        
+        #top-bar-left {
+            display: flex;
+            flex: 1;
+        }
+        
+        #top-bar-right {
+            display: flex;
+            flex: 1;
+            flex-direction: row-reverse;
+        }
+        
+        #top-bar-icons {
+            display: flex;
+            flex-direction: row;
+            justify-items: center;
+            align-items: center;
+        }
+        
+        #top-bar-icon-1 {
+            height: 2.5vw;
+            width: auto;
+            margin-right: 1vw;
+        }
+        
+        #top-bar-icon-2 {
+            height: 2vw;
+            width: auto;
+        }
+        
+        #more-info {
+            background-color: white;
+            border: none;
+            border-radius: 10vw;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 1vh;
+            margin-right: 3px;
+            cursor: pointer;
+        }
+        
+        #circle {
+            height: 20px;
+            width: 20px;
+            border-radius: 100px;
+            border: 5px solid black;
+            background: none;
+        }
+        
+        #more-info-text {
+            font-weight: 600;
+            margin-left: 5px;
+        }
+        
+        #main-details {
+            display: flex;
+            flex-direction: column;
+            flex: 10;
+        }
+        
+        .carousel-item {
+            height: 80vh;
+        }
+        
+        .testImage {
+            height: 50vh;
+            width: auto;
+        }
+        
+        .planet-container {
+            display: flex;
+            flex-direction: row;
+            height: 80vh;
+            width: 100%;
+        }
+        
+        .planet-model {
+            display: flex;
+            flex: 1
+        }
+        
+        .planet-details {
+            display: flex;
+            flex: 1.5;
+            background-color: gray;
+            border-radius: 3vh;
+        }
+        
+        //Animations
+        @keyframes backgroundAnimation {
+            0% {
+                filter: brightness(5%)
+            }
+            100% {
+                filter: brightness(100%);
+            }
+        }
