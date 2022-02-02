@@ -127,11 +127,15 @@
             cursor: pointer;
         }
         
+        #more-info:hover {
+            color: rgba(0, 0, 0, 0.7);
+        }
+        
         #circle {
             height: 20px;
             width: 20px;
             border-radius: 100px;
-            border: 5px solid black;
+            border: 5px solid;
             background: none;
         }
         
@@ -140,6 +144,9 @@
             margin-left: 5px;
         }
         
+        // #more-info-text:hover {
+        //     color: rgba(0, 0, 0, 0.7);
+        // }
         #main-details {
             display: flex;
             flex-direction: column;
@@ -186,3 +193,75 @@
                 filter: brightness(100%);
             }
         }
+        
+        // Mobile
+        @media screen and (max-width:830px) {
+            #continue {
+                font-size: 1.5rem;
+                font-weight: 100;
+            }
+            #onboardImg {
+                width: 40%;
+                height: auto;
+            }
+            #onboardImgText {
+                width: 70%;
+                height: auto;
+            }
+            #top-bar {
+                display: flex;
+                flex: 1;
+                align-items: center;
+                flex-direction: column;
+                padding: 0.5vw;
+            }
+            #top-bar-icons {
+                display: flex;
+                flex-direction: row;
+                margin-top: 1vw;
+            }
+            #top-bar-icon-1 {
+                height: 6vw;
+                width: auto;
+                margin-right: 1vw;
+            }
+            #top-bar-icon-2 {
+                height: 5vw;
+                width: auto;
+            }
+            #top-bar-right {
+                display: flex;
+                flex: 1;
+                flex-direction: row;
+            }
+            #more-info {
+                background-color: white;
+                border: none;
+                border-radius: 10vw;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                padding: 1vh;
+                margin-right: 3px;
+                cursor: pointer;
+                width: 80vw;
+                margin: 5vw;
+            }
+            #circle {
+                display: none;
+            }
+            .planet-container {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+            .planet-details {
+                align-items: center;
+            }
+            ul {
+                list-style: none;
+                padding: 0 !important;
+            }
+        }
+        /* Media Query for low resolution  Tablets, Ipads */

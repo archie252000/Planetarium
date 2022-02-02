@@ -25,6 +25,8 @@ const loader = new GLTFLoader();
 const renderers = [];
 const cameras = [];
 
+''
+
 for (var i = 0; i < planetContainers.length; i++) {
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
@@ -43,23 +45,41 @@ for (var i = 0; i < planetContainers.length; i++) {
     camera.position.set(0, 0, 1);
     cameras.push(camera);
 
+
     scene.add(light);
 
+    if (planetNames[i] == "saturn") {
+        loader.load(
+            path,
+            function(glb) {
 
-    loader.load(
-        path,
-        function(glb) {
+                glb.scene.scale.set(0.00045, 0.00045, 0.00045)
 
+                scene.add(glb.scene);
 
-            glb.scene.scale.set(0.001, 0.001, 0.001)
-            scene.add(glb.scene);
+            },
+            undefined,
+            function(error) {
+                console.error(error);
+            }
+        );
+    } else {
 
-        },
-        undefined,
-        function(error) {
-            console.error(error);
-        }
-    );
+        loader.load(
+            path,
+            function(glb) {
+
+                glb.scene.scale.set(0.001, 0.001, 0.001)
+
+                scene.add(glb.scene);
+
+            },
+            undefined,
+            function(error) {
+                console.error(error);
+            }
+        );
+    }
     controls.update();
 
     function animate() {
@@ -73,9 +93,8 @@ for (var i = 0; i < planetContainers.length; i++) {
 }
 
 
-const resizeWindow = document.body;
-console.log(resizeWindow);
 window.addEventListener("resize", (event) => {
+
     const newHeight = planetContainers[0].offsetHeight;
     const newWidth = planetContainers[0].offsetWidth;
 
@@ -83,96 +102,8 @@ window.addEventListener("resize", (event) => {
         renderers[i].setSize(newWidth, newHeight);
         cameras[i].aspect = newWidth / newHeight;
         cameras[i].updateProjectionMatrix();
+
+
     }
 
 })
-
-// const planetContainer = document.getElementsByClassName("planet-model")[0];
-// const planetContainer1 = document.getElementsByClassName("planet-model")[1];
-
-
-// const scene = new THREE.Scene();
-// const scene1 = new THREE.Scene();
-
-// const camera = new THREE.PerspectiveCamera(
-//     75,
-//     planetContainer.offsetWidth / planetContainer.offsetHeight,
-//     0.01,
-//     1000
-// );
-// const camera1 = new THREE.PerspectiveCamera(
-//     75,
-//     planetContainer.offsetWidth / planetContainer.offsetHeight,
-//     0.01,
-//     1000
-// );
-// const renderer = new THREE.WebGLRenderer({ alpha: true });
-// const renderer1 = new THREE.WebGLRenderer({ alpha: true });
-
-
-// renderer.setSize(planetContainer.offsetWidth, planetContainer.offsetHeight);
-// renderer1.setSize(planetContainer.offsetWidth, planetContainer.offsetHeight);
-
-// const controls = new OrbitControls(camera, renderer.domElement);
-// planetContainer.appendChild(renderer.domElement);
-// planetContainer1.appendChild(renderer1.domElement)
-// var loader = new GLTFLoader();
-
-
-
-// var obj;
-// loader.load(
-//     "./Assets/planets/earth.glb",
-//     function(glb) {
-
-//         obj = glb.scene;
-//         glb.scene.scale.set(0.001, 0.001, 0.001)
-//         scene.add(glb.scene);
-
-//     },
-//     undefined,
-//     function(error) {
-//         console.error(error);
-//     }
-// );
-// loader.load(
-//     "./Assets/planets/mercury.glb",
-//     function(glb) {
-
-//         obj = glb.scene;
-//         glb.scene.scale.set(0.001, 0.001, 0.001)
-//         scene1.add(glb.scene);
-
-
-//     },
-//     undefined,
-//     function(error) {
-//         console.error(error);
-//     }
-// );
-
-// // var light = new THREE.HemisphereLight(0xffffff, 0x000000, 2);
-// var light = new THREE.AmbientLight(0xffffff, 5);
-// scene.add(light)
-// scene1.add(new THREE.AmbientLight(0xffffff, 5))
-// camera.position.set(0, 0, 1);
-// camera1.position.set(0, 0, 1);
-
-
-// controls.update()
-
-// function animate() {
-
-//     requestAnimationFrame(animate);
-//     renderer.render(scene, camera);
-//     renderer1.render(scene1, camera1);
-// }
-// animate();
-
-// function animate1() {
-
-//     requestAnimationFrame(animate1);
-
-//     renderer1.render(scene1, camera1);
-// }
-// animate1();
