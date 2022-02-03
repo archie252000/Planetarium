@@ -3,6 +3,7 @@ import * as THREE from "https://unpkg.com/three@0.126.1/build/three.module.js";
 import { GLTFLoader } from "https://unpkg.com/three@0.126.1/examples/jsm/loaders/GLTFLoader.js";
 import { OrbitControls } from "https://unpkg.com/three@0.126.1/examples/jsm/controls/OrbitControls.js";
 
+
 const planetContainers = document.getElementsByClassName("planet-model");
 const planetNames = [
     "mercury",
@@ -72,6 +73,7 @@ for (var i = 0; i < planetContainers.length; i++) {
                 glb.scene.scale.set(0.001, 0.001, 0.001)
 
                 scene.add(glb.scene);
+                console.log("loaded");
 
             },
             undefined,

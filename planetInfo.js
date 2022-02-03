@@ -1,9 +1,8 @@
 async function setPlanetData(name, moons, gravity, desnity, aphelion, perihelion, planetName) {
 
     try {
-        console.log("CALLED");
+
         const res = await axios.get(`https://api.le-systeme-solaire.net/rest/bodies/{${planetName}}`);
-        console.log(res.data);
         name.innerHTML = res.data.englishName;
         moons.innerHTML = (res.data.moons == null) ? (
             "<b>Number of moons -</b> " + 0
