@@ -254,6 +254,11 @@ body {
   padding: 30px;
 }
 
+.nasa-link {
+  text-decoration: none;
+  color: #43a6d8;
+}
+
 @-webkit-keyframes backgroundAnimation {
   0% {
     -webkit-filter: brightness(5%);

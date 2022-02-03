@@ -95,6 +95,7 @@ for (var i = 0; i < planetContainers.length; i++) {
 
 window.addEventListener("resize", (event) => {
 
+
     const newHeight = planetContainers[0].offsetHeight;
     const newWidth = planetContainers[0].offsetWidth;
 

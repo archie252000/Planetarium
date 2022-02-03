@@ -18,8 +18,9 @@
 
 
 <script defer src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script defer type="module" src="ModelLoader.js"></script>
-<script defer src="script.js"></script>
+<script defer src=" planetInfo.js "></script>
+<script defer type="module " src="ModelLoader.js "></script>
+<script defer src="script.js "></script>
 
 <title>Planetarium</title>
 </head>
@@ -44,9 +45,9 @@
 
             <div id="top-bar">
                 <div id="top-bar-left">
-                    <div id="top-bar-icons">
-                        <img src="Assets/LogoWhite.png" id='top-bar-icon-1'></img>
-                        <img src="Assets/LogoType.png" id='top-bar-icon-2'></img>
+                    <div id="top-bar-icon">
+                        <img src="Assets/LogoWhite.png " id='top-bar-icon-1'></img>
+                        <img src="Assets/LogoType.png " id='top-bar-icon-2'></img>
                     </div>
                 </div>
                 <div id="top-bar-right">
@@ -69,9 +70,6 @@
                         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
                         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
                         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
-
-
-
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -79,14 +77,17 @@
                                 <div class="planet-container">
                                     <div class="planet-model"></div>
                                     <div class="planet-details">
-                                        <h1><b>Planet Name</b></h1>
-                                        <p>Description</p>
+                                        <h1><b class="planet-name"></b></h1>
+                                        <p class="planet-desc">
+                                            " Mercury—the smallest planet in our solar system and closest to the Sun—is only slightly larger than Earth's Moon. Mercury is the fastest planet, zipping around the Sun every 88 Earth days."
+                                            <a href="https://solarsystem.nasa.gov/planets/overview/" class="nasa-link"> Source - Nasa</a>
+                                        </p>
                                         <ul>
-                                            <li><b>Detail-</b>info</li>
-                                            <li><b>Detail-</b>info</li>
-                                            <li><b>Detail-</b>info</li>
-                                            <li><b>Detail-</b>info</li>
-                                            <li><b>Detail-</b>info</li>
+                                            <li class="planet-moons"></li>
+                                            <li class="planet-gravity"></li>
+                                            <li class="planet-density"></li>
+                                            <li class="planet-perihelion"></li>
+                                            <li class="planet-aphelion"></li>
 
                                         </ul>
                                     </div>
@@ -97,7 +98,19 @@
                             <div class="container">
                                 <div class="planet-container">
                                     <div class="planet-model"></div>
-                                    <div class="planet-details"></div>
+                                    <div class="planet-details">
+                                        <h1><b class="planet-name"></b></h1>
+                                        <p class="planet-desc"> "Venus spins slowly in the opposite direction from most planets. A thick atmosphere traps heat in a runaway greenhouse effect, making it the hottest planet in our solar system."
+                                            <a href="https://solarsystem.nasa.gov/planets/overview/" class="nasa-link"> Source - Nasa</a></p>
+                                        <ul>
+                                            <li class="planet-moons"></li>
+                                            <li class="planet-gravity"></li>
+                                            <li class="planet-density"></li>
+                                            <li class="planet-perihelion"></li>
+                                            <li class="planet-aphelion"></li>
+
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -105,7 +118,19 @@
                             <div class="container">
                                 <div class="planet-container">
                                     <div class="planet-model"></div>
-                                    <div class="planet-details"></div>
+                                    <div class="planet-details">
+                                        <h1><b class="planet-name"></b></h1>
+                                        <p class="planet-desc"> "Earth—our home planet—is the only place we know of so far that’s inhabited by living things. It's also the only planet in our solar system with liquid water on the surface."
+                                            <a href="https://solarsystem.nasa.gov/planets/overview/" class="nasa-link"> Source - Nasa</a></p>
+                                        <ul>
+                                            <li class="planet-moons"></li>
+                                            <li class="planet-gravity"></li>
+                                            <li class="planet-density"></li>
+                                            <li class="planet-perihelion"></li>
+                                            <li class="planet-aphelion"></li>
+
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -113,7 +138,19 @@
                             <div class="container">
                                 <div class="planet-container">
                                     <div class="planet-model"></div>
-                                    <div class="planet-details"></div>
+                                    <div class="planet-details">
+                                        <h1><b class="planet-name"></b></h1>
+                                        <p class="planet-desc"> "Mars is a dusty, cold, desert world with a very thin atmosphere. There is strong evidence Mars was – billions of years ago – wetter and warmer, with a thicker atmosphere."
+                                            <a href="https://solarsystem.nasa.gov/planets/overview/" class="nasa-link"> Source - Nasa</a></p>
+                                        <ul>
+                                            <li class="planet-moons"></li>
+                                            <li class="planet-gravity"></li>
+                                            <li class="planet-density"></li>
+                                            <li class="planet-perihelion"></li>
+                                            <li class="planet-aphelion"></li>
+
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -121,7 +158,19 @@
                             <div class="container">
                                 <div class="planet-container">
                                     <div class="planet-model"></div>
-                                    <div class="planet-details"></div>
+                                    <div class="planet-details">
+                                        <h1><b class="planet-name"></b></h1>
+                                        <p class="planet-desc"> "Jupiter is more than twice as massive than the other planets of our solar system combined. The giant planet's Great Red spot is a centuries-old storm bigger than Earth."
+                                            <a href="https://solarsystem.nasa.gov/planets/overview/" class="nasa-link"> Source - Nasa</a></p>
+                                        <ul>
+                                            <li class="planet-moons"></li>
+                                            <li class="planet-gravity"></li>
+                                            <li class="planet-density"></li>
+                                            <li class="planet-perihelion"></li>
+                                            <li class="planet-aphelion"></li>
+
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -129,7 +178,19 @@
                             <div class="container">
                                 <div class="planet-container">
                                     <div class="planet-model"></div>
-                                    <div class="planet-details"></div>
+                                    <div class="planet-details">
+                                        <h1><b class="planet-name"></b></h1>
+                                        <p class="planet-desc"> "Adorned with a dazzling, complex system of icy rings, Saturn is unique in our solar system. The other giant planets have rings, but none are as spectacular as Saturn's. "
+                                            <a href="https://solarsystem.nasa.gov/planets/overview/" class="nasa-link"> Source - Nasa</a></p>
+                                        <ul>
+                                            <li class="planet-moons"></li>
+                                            <li class="planet-gravity"></li>
+                                            <li class="planet-density"></li>
+                                            <li class="planet-perihelion"></li>
+                                            <li class="planet-aphelion"></li>
+
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -137,7 +198,19 @@
                             <div class="container">
                                 <div class="planet-container">
                                     <div class="planet-model"></div>
-                                    <div class="planet-details"></div>
+                                    <div class="planet-details">
+                                        <h1><b class="planet-name"></b></h1>
+                                        <p class="planet-desc"> "Uranus—seventh planet from the Sun—rotates at a nearly 90-degree angle from the plane of its orbit. This unique tilt makes Uranus appear to spin on its side."
+                                            <a href="https://solarsystem.nasa.gov/planets/overview/" class="nasa-link"> Source - Nasa</a></p>
+                                        <ul>
+                                            <li class="planet-moons"></li>
+                                            <li class="planet-gravity"></li>
+                                            <li class="planet-density"></li>
+                                            <li class="planet-perihelion"></li>
+                                            <li class="planet-aphelion"></li>
+
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -145,7 +218,19 @@
                             <div class="container">
                                 <div class="planet-container">
                                     <div class="planet-model"></div>
-                                    <div class="planet-details"></div>
+                                    <div class="planet-details">
+                                        <h1><b class="planet-name"></b></h1>
+                                        <p class="planet-desc"> "Neptune—the eighth and most distant major planet orbiting our Sun—is dark, cold and whipped by supersonic winds. It was the first planet located through mathematical calculations. "
+                                            <a href="https://solarsystem.nasa.gov/planets/overview/" class="nasa-link"> Source - Nasa</a></p>
+                                        <ul>
+                                            <li class="planet-moons"></li>
+                                            <li class="planet-gravity"></li>
+                                            <li class="planet-density"></li>
+                                            <li class="planet-perihelion"></li>
+                                            <li class="planet-aphelion"></li>
+
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>

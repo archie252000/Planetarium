@@ -144,9 +144,6 @@
             margin-left: 5px;
         }
         
-        // #more-info-text:hover {
-        //     color: rgba(0, 0, 0, 0.7);
-        // }
         #main-details {
             display: flex;
             flex-direction: column;
@@ -182,6 +179,11 @@
             border-radius: 3vh;
             color: white;
             padding: 30px
+        }
+        
+        .nasa-link {
+            text-decoration: none;
+            color: #43a6d8
         }
         
         //Animations
