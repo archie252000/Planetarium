@@ -175,6 +175,8 @@ body {
   padding: 1vh;
   margin-right: 3px;
   cursor: pointer;
+  text-decoration: none;
+  color: inherit;
 }
 
 #more-info:hover {
@@ -363,6 +365,8 @@ body {
     cursor: pointer;
     width: 80vw;
     margin: 5vw;
+    text-decoration: none;
+    color: inherit;
   }
   #circle {
     display: none;
