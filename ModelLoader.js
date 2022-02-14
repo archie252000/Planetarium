@@ -73,7 +73,7 @@ for (var i = 0; i < planetContainers.length; i++) {
                 glb.scene.scale.set(0.001, 0.001, 0.001)
 
                 scene.add(glb.scene);
-                console.log("loaded");
+
 
             },
             undefined,
@@ -98,8 +98,24 @@ for (var i = 0; i < planetContainers.length; i++) {
 window.addEventListener("resize", (event) => {
 
 
-    const newHeight = planetContainers[0].offsetHeight;
-    const newWidth = planetContainers[0].offsetWidth;
+    const planetContainersArray = Object.values(planetContainers)
+
+
+    var newHeight = 0;
+    var newWidth = 0;
+
+    for (var i = 0; i < planetContainersArray.length; i++) {
+        var currHeight = planetContainers[i].offsetHeight;
+        var currWidth = planetContainers[i].offsetWidth;
+
+        if (!isNaN(currHeight)) {
+            newHeight = Math.max(newHeight, currHeight);
+        }
+        if (!isNaN(currWidth)) {
+            newWidth = Math.max(newWidth, currWidth);
+        }
+
+    }
 
     for (var i = 0; i < planetContainers.length; i++) {
         renderers[i].setSize(newWidth, newHeight);
